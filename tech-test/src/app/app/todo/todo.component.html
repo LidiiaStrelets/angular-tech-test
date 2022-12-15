@@ -1,0 +1,9 @@
+<h2>Todo list</h2>
+<app-filter (onFilterChange)="setFilter($event)"></app-filter>
+<app-todo-list [filter]="filter" [newTodo]="newTodo"></app-todo-list>
+
+<app-todo-form
+  (onTodoCreate)="handleTodo($event)"
+  eventType="create"
+  buttonText="Add todo"
+></app-todo-form>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="item?.id === toEdit; then edit; else show"></div>
+  <ng-template #show>
+    <p class="title">
+      {{ item?.label }}<span> ( {{ item?.category }} )</span>
+    </p>
+    <p>{{ item?.description }}</p>
+    <div class="ckeck-container" (click)="handleMark()">
+      <span [ngClass]="item?.done && 'done'" class="checkmark"> &#10003; </span>
+
+      <span>{{ item?.done ? doneText : undoneText }}</span>
+    </div>
+    <button class="edit" (click)="editTodo(item.id)">Edit item</button>
+    <button class="delete" (click)="deleteTodo(item.id)">
+      Delete item
+    </button></ng-template
+  >
+
+  <ng-template #edit>
+    <app-todo-form
+      eventType="edit"
+      buttonText="done"
+      [item]="item"
+      (onEdit)="handleEdit($event)"
+    ></app-todo-form>
+  </ng-template>
+</div>

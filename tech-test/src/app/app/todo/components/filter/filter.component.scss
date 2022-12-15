@@ -1,0 +1,29 @@
+@use "./../../../styles/button.scss" as *;
+@use "./../../../styles/input.scss" as *;
+
+div {
+  &.main {
+    margin-left: 35px;
+  }
+  &.input-container {
+    display: flex;
+  }
+}
+button {
+  @include button;
+
+  color: rgb(151, 8, 8);
+  border: 2px solid rgb(151, 8, 8);
+
+  &:hover,
+  &:focus {
+    background: rgb(205, 126, 126);
+  }
+}
+input {
+  @include input();
+  margin-right: 10px;
+}
+p {
+  font-size: 20px;
+}

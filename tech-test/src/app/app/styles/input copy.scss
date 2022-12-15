@@ -1,0 +1,15 @@
+@mixin input() {
+  width: 40%;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px 10px;
+
+  transition: border-color 500ms ease;
+
+  &:active,
+  &:hover,
+  &:focus {
+    border-color: rgb(255, 184, 51);
+    outline: none;
+  }
+}

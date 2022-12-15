@@ -1,0 +1,19 @@
+@mixin button() {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  width: 130px;
+  height: 40px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  text-transform: uppercase;
+
+  background: white;
+  transition: background 500ms ease;
+}

@@ -1,0 +1,8 @@
+<div class="main">
+  <p>Find a task:</p>
+  <div class="input-container">
+    <input (ngModelChange)="handleChange($event)" [(ngModel)]="filter" />
+
+    <button (click)="clearFilter()">clear</button>
+  </div>
+</div>

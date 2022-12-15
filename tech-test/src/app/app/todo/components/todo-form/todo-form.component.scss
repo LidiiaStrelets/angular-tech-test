@@ -1,0 +1,80 @@
+@use "./../../../styles/input.scss" as *;
+@use "./../../../styles/button.scss" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  &.create {
+    margin-left: 35px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    input {
+      margin-right: 40%;
+      font-size: 20px;
+
+      width: 40%;
+    }
+    button {
+      margin-right: 40%;
+    }
+    textarea {
+      width: 40%;
+      margin-right: 40%;
+      font-size: 20px;
+    }
+    label {
+      font-size: 20px;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    margin-bottom: 10px;
+  }
+  input {
+    @include input();
+
+    width: 70%;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  button {
+    @include button();
+
+    color: green;
+    border: 2px solid green;
+
+    align-self: flex-end;
+
+    &:hover,
+    &:focus {
+      background: rgb(144, 181, 144);
+    }
+  }
+  textarea {
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 70%;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-width: 2px;
+
+    transition: border-color 500ms ease;
+
+    &:active,
+    &:hover,
+    &:focus {
+      border-color: rgb(255, 184, 51);
+      outline: none;
+    }
+  }
+  label {
+    font-size: 12px;
+  }
+}

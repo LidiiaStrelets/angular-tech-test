@@ -1,0 +1,12 @@
+<form [ngClass]="eventType" (ngSubmit)="handleSubmit()" [formGroup]="todoForm">
+  <div><label>Label:</label> <input formControlName="label" /></div>
+
+  <div>
+    <label>Description:</label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div><label>Category:</label> <input formControlName="category" /></div>
+
+  <button type="submit">{{ buttonText }}</button>
+</form>

@@ -1,0 +1,9 @@
+<ul *ngIf="getFilteredTodos().length > 0">
+  <li *ngFor="let item of getFilteredTodos(); trackBy: TrackTodo">
+    <app-todo-item
+      (onDeleteTodo)="handleDelete($event)"
+      (onEditTodo)="handleEdit($event)"
+      [item]="item"
+    ></app-todo-item>
+  </li>
+</ul>

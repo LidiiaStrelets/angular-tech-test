@@ -1,0 +1,77 @@
+@use "./../../../styles/button.scss" as *;
+
+div {
+  &.container {
+    padding: 10px;
+  }
+  &.ckeck-container {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+  }
+}
+span.checkmark {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+
+  background: white;
+  transition: background 500ms ease;
+
+  &.done {
+    background: green;
+  }
+}
+p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &.title {
+    font-weight: bold;
+    font-size: 20px;
+
+    & span {
+      font-size: 15px;
+      font-style: italic;
+    }
+  }
+}
+button {
+  &.edit {
+    @include button;
+
+    margin-right: 10px;
+
+    color: rgb(255, 184, 51);
+    border: 2px solid rgb(255, 184, 51);
+
+    &:hover,
+    &:focus {
+      background: rgb(255, 223, 162);
+    }
+  }
+  &.delete {
+    @include button;
+
+    color: rgb(151, 8, 8);
+    border: 2px solid rgb(151, 8, 8);
+
+    &:hover,
+    &:focus {
+      background: rgb(205, 126, 126);
+    }
+  }
+}
